@@ -1,11 +1,11 @@
 return {
-  "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
 
-  opts = {
-    diagnostics = {
-      virtual_text = {
-        spacing = 4,
-      },
+    opts = {
+        diagnostics = {
+            virtual_text = {
+                spacing = 4,
+            },
+        },
     },
-  },
 }
