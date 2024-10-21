@@ -5,7 +5,4 @@
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
-<<<<<<< HEAD
-=======
 vim.opt.termguicolors = true
->>>>>>> bef46e450ddb34bf9f3fe95777e6be9c94d8526f
