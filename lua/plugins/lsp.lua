@@ -1,7 +1,7 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
-
+		event = "VeryLazy",
 		opts = {
 			diagnostics = {
 				virtual_text = {
