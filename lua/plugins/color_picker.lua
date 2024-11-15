@@ -6,6 +6,7 @@ return {
 
 	{
 		"nvchad/minty",
+		lazy = true,
 		cmd = { "Shades", "Huefy" },
 	},
 }
