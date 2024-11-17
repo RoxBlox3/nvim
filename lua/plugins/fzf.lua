@@ -11,13 +11,13 @@ return {
 					builtin = {
 						extensions = {
 							-- neovim terminal only supports `viu` block output
-							["gif"] = { "chafa" },
-							["png"] = { "chafa" },
-							["jpeg"] = { "chafa" },
+							["gif"] = { "chafa", "{file}", "--format=symbols" },
+							["png"] = { "chafa", "{file}", "--format=symbols" },
+							["jpeg"] = { "chafa", "{file}", "--format=symbols" },
 							-- by default the filename is added as last argument
 							-- if required, use `{file}` for argument positioning
-							["svg"] = { "chafa", "{file}" },
-							["jpg"] = { "chafa" },
+							["svg"] = { "chafa", "{file}", "--format=symbols" },
+							["jpg"] = { "chafa", "{file}", "--format=symbols" },
 						},
 					},
 				},
