@@ -1,4 +1,5 @@
 return {
+	--[[
 	{
 		"onsails/lspkind.nvim",
 	},
@@ -63,11 +64,11 @@ return {
 							item.kind_hl_group = color_item.abbr_hl_group
 							item.kind = color_item.abbr
 						end
-						--[[
-					if icons[item.kind] then
-						item.kind = icons[item.kind] .. item.kind
-					end
-					]]
+
+					--if icons[item.kind] then
+					--item.kind = icons[item.kind] .. item.kind
+					--end
+					
 						local widths = {
 							abbr = vim.g.cmp_widths and vim.g.cmp_widths.abbr or 40,
 							menu = vim.g.cmp_widths and vim.g.cmp_widths.menu or 30,
@@ -92,4 +93,5 @@ return {
 		end,
 		main = "lazyvim.util.cmp",
 	},
+--]]
 }
