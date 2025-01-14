@@ -21,8 +21,16 @@ return {
 			},
 			completion = {
 				menu = {
+					border = "single",
 					draw = {
 						components = {
+							label = {
+								text = function(ctx)
+									return ctx.label
+								end,
+								highlight = "CmpItemKind",
+								ellipsis = true,
+							},
 							kind_icon = {
 								ellipsis = false,
 								text = function(ctx)
@@ -35,8 +43,24 @@ return {
 									return hl
 								end,
 							},
+							--[[
+						columns = {
+							{ "label", "label _description", gap = 1 },
+							{ "kind_icon", "kind" },
+						},
+						--]]
 						},
 					},
+				},
+				documentation = {
+					window = {
+						border = "single",
+					},
+				},
+			},
+			signature = {
+				window = {
+					border = "single",
 				},
 			},
 		},
