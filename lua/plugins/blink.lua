@@ -3,10 +3,15 @@ return {
 		"saghen/blink.cmp",
 		-- optional: provides snippets for the snippet source
 		dependencies = "rafamadriz/friendly-snippets",
-
-		---@module 'blink.cmp'
-		---@type blink.cmp.Config
+		event = "VeryLazy",
 		opts = {
+			sources = {
+
+				default = { "dadbod" },
+				providers = {
+					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+				},
+			},
 			-- 'default' for mappings similar to built-in completion
 			-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
 			-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
@@ -31,6 +36,7 @@ return {
 								highlight = "CmpItemKind",
 								ellipsis = true,
 							},
+
 							kind_icon = {
 								ellipsis = false,
 								text = function(ctx)
@@ -43,12 +49,15 @@ return {
 									return hl
 								end,
 							},
-							--[[
+						},
+						--[[
 						columns = {
 							{ "label", "label _description", gap = 1 },
 							{ "kind_icon", "kind" },
 						},
 						--]]
+						treesitter = {
+							"lsp",
 						},
 					},
 				},

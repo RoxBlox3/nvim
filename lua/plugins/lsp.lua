@@ -1,6 +1,7 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = { "saghen/blink.cmp" },
 		event = "VeryLazy",
 		opts = {
 			diagnostics = {
@@ -9,9 +10,10 @@ return {
 				},
 			},
 		},
-	},
-
-	{
-		require("lspconfig").unocss.setup({}),
+		config = function(_, opts)
+			local lspconfig = require("lspconfig")
+			for server, config in pairs(opts.servers) do
+			end
+		end,
 	},
 }
